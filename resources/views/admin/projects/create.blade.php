@@ -23,7 +23,6 @@
 
                 {{-- Tipo  --}}
 
-
                 <div class="form-group mb-3">
                     <label for="type">Tipo Progetto: </label>
                     <select name="type_id" id="type">
@@ -32,8 +31,25 @@
                             <option value="{{ $type->id }}" @selected(old('type_id') == $type->id)> {{ $type->name }}</option>
                         @endforeach
                     </select>
-
                 </div>
+
+
+                {{-- Tecnologia  --}}
+
+                <div class="form-group mb-3">
+
+                    <h4>Tecnologie Utilizzate</h4>
+                    @foreach ($technologies as $technology)
+                        <div class="form-check">
+                            <input type="checkbox" name="technologies[]" id="technology-{{ $technology->id }}"
+                                class="form-check-input" value="{{ $technology->id }}">
+                            <label for="{{ $technology->id }}" class="form-check-lable">{{ $technology->name }}</label>
+                        </div>
+                    @endforeach
+                </div>
+
+
+
 
                 {{-- IMMAGINE  --}}
                 <form action="" method="POST" enctype="multipart/form-data">
