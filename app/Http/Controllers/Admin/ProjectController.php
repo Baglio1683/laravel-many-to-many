@@ -108,9 +108,6 @@ class ProjectController extends Controller
         $project->technologies()->sync([]);
             // $project->technologies()->detach();  
        }
-
-
-
         return redirect()->route('admin.projects.index')->with('message', '$project->title è stato aggiornato correttamente'); 
     }
 
