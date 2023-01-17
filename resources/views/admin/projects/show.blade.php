@@ -8,6 +8,15 @@
             <h5>{{ $project->created_at }}</h5>
             <p>{{ $project->slug }}</p>
         </div>
+
+        <div class="">
+            @forelse ($project->technologies as $technology)
+                <span># {{ $technology->name }}</span>
+            @empty
+                <span>Nessuna Technologia selezionata</span>
+            @endforelse
+        </div>
+
         <div>
             <img src="{{ asset('storage/' . $project->cover_image) }}" alt="">
         </div>
