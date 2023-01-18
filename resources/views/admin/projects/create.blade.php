@@ -37,7 +37,6 @@
                 {{-- Tecnologia  --}}
 
                 <div class="form-group mb-3">
-
                     <h4>Tecnologie Utilizzate</h4>
                     @foreach ($technologies as $technology)
                         <div class="form-check">
