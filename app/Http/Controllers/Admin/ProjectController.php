@@ -60,8 +60,6 @@ class ProjectController extends Controller
             $project->technologies()->attach($request->technologies); 
         }
 
-
-
         return redirect()->route('admin.projects.index')->with('message', 'il progetto è stato creato con successo'); 
     }
 
