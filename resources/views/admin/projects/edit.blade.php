@@ -7,7 +7,7 @@
 
                 @include('partials.errors')
 
-                <form action="route('admin.projects.update', $project->slug)" method="POST">
+                <form action="{{ route('admin.projects.update', $project->slug) }}" method="POST">
                     @method('PUT')
                     @csrf
                     <div class="form-group">
